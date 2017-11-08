@@ -32,6 +32,6 @@ Posteriormente, se establecen como servicios y se ejecuta el comando start a cad
 ![][2]
 
 
-[1]:images/shunoydos.PNG
+[1]:shunoydos.PNG
 
-[2]:images/establecelosserviviosyStart.PNG
+[2]:establecelosserviviosyStart.PNG

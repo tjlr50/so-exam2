@@ -3,13 +3,21 @@
 
 
 **Parcial 2**
+
+
 **Curso:** Sistemas Operativos  
+
 **Docente:** Daniel Barragán C.  
-**Tema:** Namespaces, CGroups, LXC
+
+**Tema:** Introducción a systemd 
+
+
 **Correo:** daniel.barragan at correo.icesi.edu.co
 
 **Nombre:** Tomas Julian Lemus Rubiano
+
 **Código:** A00054616  
+
 **URL:** https://github.com/tjlr50/so-exam2/edit/A00054616/Parcial2
 
 

@@ -18,7 +18,7 @@
 
 **Código:** A00054616  
 
-**URL:** https://github.com/tjlr50/so-exam2/edit/A00054616/Parcial2
+**URL:** https://github.com/tjlr50/so-exam2/
 
 
 Se crean y se ejecutas los procesos a los que se les cambiarán sus caracteristicas de procesamiento. Cabe aclarar,que se deben habilitar los permisos de ejecución para rpobar su funcionamiento.
@@ -92,6 +92,17 @@ Hay dos formas en que un grupo puede ser acelerado: Consumir completamente su pr
 Como su nombre lo indica, especifica el porcentaje de recursos de CPU disponibles para compartir la CPU según la cantidad de procesos y el consumo necesario de cada uno de ellos. Lo cual permite una administración dinamica para los servicios que da pie a una característica técnica, llamada hyperthreading, que permite que el servidor físico parezca tener realmente 16 unidades de CPU. Hyperthreading aprovecha el hecho de que las CPU suelen estar inactivas, a la espera de que se completen otros procesos relativamente más lentos, como los accionamientos de las unidades de disco. 
 
 En conclusión, Es preferible usar CPUQuotas cuando se quiera evitar la ejecución de procesos que requieran timepos elevados de CPU. Mientras que CPUShares es preferible cuando se desea una mejor asignación de recursos a los procesos y una mejor distribución de la CPU, pues no se dejarían recursos sin utilizar. 
+
+### Referencias
+https://github.com/ICESI/so-containers
+
+https://github.com/ICESI/so-processes/tree/master/03_systemd
+
+https://support.eapps.com/index.php?/Knowledgebase/Article/View/449/8/faq---what-are-cpu-shares
+
+https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt
+
+http://dondocker.com/seguridad-para-contenedores-docker-en-produccion/
 
 
 [1]:scriptlolypermisos.PNG

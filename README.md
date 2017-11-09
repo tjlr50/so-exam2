@@ -82,12 +82,12 @@ Por ejemplo:
 
 Mediante cgroups podemos limitar el acceso al hardware y no permitir a los contenedores más uso de hardware del que nosotros requerimos. En ello podemos limitar tanto en CPU como en RAM o red. En este caso usamos la limitación de la CPU con los siguientes grupos de control:
 
-# 1. CPUQuota:
+## 1. CPUQuota:
 Es un valor representado en porcentaje, el cual se asigna a un proceso para determinar el tiempo maximo en el que podrá abastecer de cpu en un periodo (en microsegundos) y la cuota mínima permitida para la cuota o el período es 1 ms.
 Hay dos formas en que un grupo puede ser acelerado: Consumir completamente su propia cuota dentro de un período o que la cuota de uno de los padres está completamente consumida dentro de su período.
 
 
-# 2. CPUShares:
+## 2. CPUShares:
 
 Como su nombre lo indica, especifica el porcentaje de recursos de CPU disponibles para compartir la CPU según la cantidad de procesos y el consumo necesario de cada uno de ellos. Lo cual permite una administración dinamica para los servicios que da pie a una característica técnica, llamada hyperthreading, que permite que el servidor físico parezca tener realmente 16 unidades de CPU. Hyperthreading aprovecha el hecho de que las CPU suelen estar inactivas, a la espera de que se completen otros procesos relativamente más lentos, como los accionamientos de las unidades de disco. 
 

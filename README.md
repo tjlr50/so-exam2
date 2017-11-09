@@ -73,6 +73,27 @@ Finalmente, se elimina uno de los procesos, y se evidencia como el proceso en ej
 ![][10]
 
 
+
+### Limitación de recursos hardware
+
+Partiendo de la importancia de la seguridad en nuestros servicios:
+A veces puede que nuestra  información no sea tan importante como para ser atacado por un hacker, o que una X persona quiso probar un tutorial que encontró en internet pueda alterar nuestros servicios o jugar con nuestra reputación, es un riesgo que se puede minimizar.
+Por ejemplo:
+
+Mediante cgroups podemos limitar el acceso al hardware y no permitir a los contenedores más uso de hardware del que nosotros requerimos. En ello podemos limitar tanto en CPU como en RAM o red. En este caso usamos la limitación de la CPU con los siguientes grupos de control:
+
+# 1. CPUQuota:
+Es un valor representado en porcentaje, el cual se asigna a un proceso para determinar el tiempo maximo en el que podrá abastecer de cpu en un periodo (en microsegundos) y la cuota mínima permitida para la cuota o el período es 1 ms.
+Hay dos formas en que un grupo puede ser acelerado: Consumir completamente su propia cuota dentro de un período o que la cuota de uno de los padres está completamente consumida dentro de su período.
+
+
+# 2. CPUShares:
+
+Como su nombre lo indica, especifica el porcentaje de recursos de CPU disponibles para compartir la CPU según la cantidad de procesos y el consumo necesario de cada uno de ellos. Lo cual permite una administración dinamica para los servicios que da pie a una característica técnica, llamada hyperthreading, que permite que el servidor físico parezca tener realmente 16 unidades de CPU. Hyperthreading aprovecha el hecho de que las CPU suelen estar inactivas, a la espera de que se completen otros procesos relativamente más lentos, como los accionamientos de las unidades de disco. 
+
+En conclusión, Es preferible usar CPUQuotas cuando se quiera evitar la ejecución de procesos que requieran timepos elevados de CPU. Mientras que CPUShares es preferible cuando se desea una mejor asignación de recursos a los procesos y una mejor distribución de la CPU, pues no se dejarían recursos sin utilizar. 
+
+
 [1]:scriptlolypermisos.PNG
 
 [2]:servicePermisosEnableStatus.PNG
@@ -95,5 +116,3 @@ Finalmente, se elimina uno de los procesos, y se evidencia como el proceso en ej
 
 [10]:topsharekill.PNG
 
-[]:.PNG
-[]:.PNG
